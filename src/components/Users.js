@@ -50,7 +50,7 @@ export default class Users extends Component {
 	renderActiveUser(arr) {
 		return arr.map(item => {
 			const {name, altname, photo, id} = item;
-			const n = arr.reduce((min, p) => p.id < min ? p.id : min, arr[0].id);
+			const n = arr.reduce((min, current) => current.id < min ? current.id : min, arr[0].id);
 			if (item.id == n) {
 				return (
 					<User
