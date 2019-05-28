@@ -15,12 +15,12 @@ export default class Users extends Component {
 	}
 
 	updatePosts() {
-		this.InstaService.getAllPosts()
-		.then(this.onPostsLoad)
+		this.InstaService.getAllUsers()
+		.then(this.onUsersLoaded)
 		.catch(this.onError);
 	}
 	
-	onPostsLoad = (posts) => {
+	onUsersLoaded = (posts) => {
 		this.setState({
 			posts,
 			error: false
@@ -52,7 +52,7 @@ export default class Users extends Component {
 			const {name, altname, photo, id} = item;
 			const n = arr.reduce((min, current) => current.id < min ? current.id : min, arr[0].id);
 			if (item.id == n) {
-				return (
+				return (	
 					<User
 						key={id}
 						src={photo}
