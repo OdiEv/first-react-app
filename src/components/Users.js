@@ -50,8 +50,9 @@ export default class Users extends Component {
 	renderActiveUser(arr) {
 		return arr.map(item => {
 			const {name, altname, photo, id} = item;
+			// choose item with min id (for example)
 			const n = arr.reduce((min, current) => current.id < min ? current.id : min, arr[0].id);
-			if (item.id == n) {
+			if (item.id === n) {
 				return (	
 					<User
 						key={id}

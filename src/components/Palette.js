@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import ErrorMessage from './ErrorMessage';
 import InstaService from '../services/instaservice';
+import Spinner from './Spinner';
 
 export default class Palette extends Component {
     InstaService = new InstaService();
 	state = {
 		photos: [],
+		spinner: true,
 		error: false
     }
 
@@ -22,13 +24,15 @@ export default class Palette extends Component {
 	onPhotosLoaded = (photos) => {
 		this.setState({
 			photos,
+			spinner: false,
 			error: false
 		})
 	}
 
 	onError = (err) => {
 		this.setState({
-			error: true
+			spinner: false,
+			error: true			
 		})
 	}
 
@@ -36,17 +40,21 @@ export default class Palette extends Component {
 		return arr.map(item => {
 			const { src, alt, id} = item;
 			return (
-				<img src={src} alt={alt} key="id"></img>
+				<img src={src} alt={alt} key={id}></img>
 			)
 		})
     }
     
     render () {
-        const {error, photos} = this.state;
-        if (error) {
+        const {error, spinner, photos} = this.state;
+		if (spinner) {
+			return <Spinner/>
+		}
+		
+		if (error) {
             return <ErrorMessage/>
-        }
-        
+		}
+
         const items = this.renderItems(photos);
 
         return (
