@@ -6,7 +6,7 @@ import ErrorMessageUsers from './ErrorMessageUsers';
 export default class Users extends Component {
 	InstaService = new InstaService();
 	state = {
-		posts: [],
+		users: [],
 		error: false
 	}
 
@@ -20,9 +20,9 @@ export default class Users extends Component {
 		.catch(this.onError);
 	}
 	
-	onUsersLoaded = (posts) => {
+	onUsersLoaded = (users) => {
 		this.setState({
-			posts,
+			users,
 			error: false
 		})
 	}
@@ -65,12 +65,12 @@ export default class Users extends Component {
 	}
 
 	render() {
-		const {error, posts} = this.state;
+		const {error, users} = this.state;
 		if (error) {
 			return <ErrorMessageUsers/>
 		}
-		const items = this.renderUsers(posts);
-		const item = this.renderActiveUser(posts);
+		const items = this.renderUsers(users);
+		const item = this.renderActiveUser(users);
 		return (
 			<div className="right">
 				{item}
