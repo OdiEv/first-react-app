@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/first-react-app/static/css/main.0184bb06.chunk.css",
+    "main.js": "/first-react-app/static/js/main.6fb3371a.chunk.js",
+    "main.js.map": "/first-react-app/static/js/main.6fb3371a.chunk.js.map",
+    "runtime~main.js": "/first-react-app/static/js/runtime~main.f5c4d8dc.js",
+    "runtime~main.js.map": "/first-react-app/static/js/runtime~main.f5c4d8dc.js.map",
+    "static/js/2.cca0c4fa.chunk.js": "/first-react-app/static/js/2.cca0c4fa.chunk.js",
+    "static/js/2.cca0c4fa.chunk.js.map": "/first-react-app/static/js/2.cca0c4fa.chunk.js.map",
+    "index.html": "/first-react-app/index.html",
+    "precache-manifest.055c315033c313d6dbd53a42e308cb6d.js": "/first-react-app/precache-manifest.055c315033c313d6dbd53a42e308cb6d.js",
+    "service-worker.js": "/first-react-app/service-worker.js",
+    "static/css/main.0184bb06.chunk.css.map": "/first-react-app/static/css/main.0184bb06.chunk.css.map",
+    "static/media/error.png": "/first-react-app/static/media/error.3b8ad90a.png",
+    "static/media/logo.svg": "/first-react-app/static/media/logo.9e8a2b39.svg",
+    "static/media/spinner.svg": "/first-react-app/static/media/spinner.cdd35491.svg"
+  }
+}
