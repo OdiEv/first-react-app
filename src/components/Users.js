@@ -11,10 +11,10 @@ export default class Users extends Component {
 	}
 
 	componentDidMount() {
-		this.updatePosts();
+		this.updateUsers();
 	}
 
-	updatePosts() {
+	updateUsers() {
 		this.InstaService.getAllUsers()
 		.then(this.onUsersLoaded)
 		.catch(this.onError);
